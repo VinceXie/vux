@@ -23,12 +23,12 @@ app.use(require('webpack-hot-middleware')(compiler))
 
 app.use('/static', express.static('./src/assets'))
 
-app.listen(8080, '0.0.0.0', function (err) {
+app.listen(8081, '0.0.0.0', function (err) {
   if (err) {
     console.log(err)
     return
   }
-  console.log('Listening at http://localhost:8080/')
+  console.log('Listening at http://localhost:8081/')
   // manully trigger bundle building to save time
-  http.get('http://localhost:8080/index.html')
+  http.get('http://localhost:8081/index.html')
 })

@@ -1,0 +1,32 @@
+From 588a39dcab29a717864d5dc3bb084d4d87e1facb Mon Sep 17 00:00:00 2001
+From: VinceXie <jan.and.oid@gmail.com>
+Date: Wed, 29 Jun 2016 11:46:21 +0800
+Subject: [PATCH] change 8090
+
+---
+ build/dev-server.js | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/build/dev-server.js b/build/dev-server.js
+index 77861f9..2969b9d 100644
+--- a/build/dev-server.js
++++ b/build/dev-server.js
+@@ -23,12 +23,12 @@ app.use(require('webpack-hot-middleware')(compiler))
+ 
+ app.use('/static', express.static('./src/assets'))
+ 
+-app.listen(8080, '0.0.0.0', function (err) {
++app.listen(8090, '0.0.0.0', function (err) {
+   if (err) {
+     console.log(err)
+     return
+   }
+-  console.log('Listening at http://localhost:8080/')
++  console.log('Listening at http://localhost:8090/')
+   // manully trigger bundle building to save time
+-  http.get('http://localhost:8080/index.html')
++  http.get('http://localhost:8090/index.html')
+ })
+-- 
+2.2.1
+
