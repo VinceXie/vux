@@ -56,10 +56,6 @@ popupDialog.prototype.hide = function (shouldCallback = true) {
   shouldCallback === false && this.params.onClose && this.params.onClose(this)
 }
 
-popupDialog.prototype.html = function (html) {
-  this.container.innerHTML = html
-}
-
 popupDialog.prototype.destroy = function () {
   this.mask.removeEventListener('click', this.onClickMask.bind(this), false)
   this.mask && this.mask.parentNode && this.mask.parentNode.removeChild(this.mask)
